@@ -1,0 +1,232 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #87CEEB, #B0E0E6); /* Sky blue gradient */
+  color: #222;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Navbar */
+nav.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar .nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: url('background.jpg') center/cover no-repeat fixed;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+.hero-overlay {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 40px;
+  border-radius: 12px;
+  color: #000;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.cta-btn {
+  background: #0288D1;
+  color: white;
+  padding: 12px 24px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* About Section */
+.about {
+  padding: 60px 20px;
+  background: #E1F5FE; /* Light sky blue */
+  color: #000;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+/* Features Section */
+.features {
+  padding: 80px 20px 60px;
+  text-align: center;
+  background: #E0F7FA;
+  color: #000;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+  font-size: 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 0 20px;
+}
+
+.feature {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out;
+  color: #000;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+}
+
+/* Signup Section */
+.signup {
+  padding: 60px 20px;
+  background: #B3E5FC;
+  text-align: center;
+  color: #000;
+}
+
+.signup h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input[type="email"] {
+  padding: 10px;
+  width: 280px;
+  max-width: 90%;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.animated-btn {
+  background: linear-gradient(to right, #0288D1, #039BE5);
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.08); }
+}
+
+/* Footer */
+footer {
+  background: #81D4FA;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+  font-size: 0.9rem;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+.slide-in {
+  animation: slideIn 1.5s ease forwards;
+  opacity: 0;
+}
+
+.fade-up {
+  animation: fadeUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-50px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta-btn {
+    font-size: 1rem;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
