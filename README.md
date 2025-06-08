@@ -21,7 +21,6 @@ Hello! I am Bhuvana, passionate about coding and building creative projects.
 
 1. Clone the repository:
 
-``bash
 git clone https://github.com/Bhuvanaadepu/CODSOFT.git
 
 2. Navigate to the folder of the task you want to explore.
