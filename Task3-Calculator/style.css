@@ -1,0 +1,138 @@
+/* Base styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Light and dark theme variables */
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+  --btn: #e0e0e0;
+  --btn-hover: #d0d0d0;
+  --equal: #4CAF50;
+}
+
+body.dark {
+  --bg: #181818;
+  --text: #ffffff;
+  --btn: #333;
+  --btn-hover: #444;
+  --equal: #00c853;
+}
+
+/* Toggle theme button */
+.toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--btn);
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+.toggle-theme:hover {
+  background: var(--btn-hover);
+}
+
+/* Calculator box */
+.calculator {
+  width: 280px;
+  padding: 15px;
+  background: var(--btn);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+
+/* Display input */
+#display {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  text-align: right;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Button grid layout */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+/* Individual buttons */
+button {
+  font-size: 14px;
+  padding: 12px;
+  background: var(--btn);
+  color: var(--text);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
+}
+
+.equal {
+  background: var(--equal);
+  color: white;
+}
+.equal:hover {
+  background: #43a047;
+}
+
+/* History panel */
+.history {
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.history h3 {
+  font-size: 16px;
+  margin: 0 0 8px;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history li {
+  padding: 4px;
+  font-size: 13px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Scrollbar for history */
+.history::-webkit-scrollbar {
+  width: 6px;
+}
+.history::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 100, 100, 0.4);
+  border-radius: 4px;
+}
