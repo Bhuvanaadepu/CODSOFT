@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle" />
+  <label for="theme-toggle" class="theme-icon" title="Toggle Theme"></label>
+
+  <div class="container">
+    <header>
+      <h1>Adepu Bhuvana</h1>
+      <p>Web Developer | Creative Coder | Designer</p>
+    </header>
+
+    <!-- Tab Navigation -->
+    <div class="tabs">
+      <input type="radio" name="tab" id="tab1" checked>
+      <label for="tab1">About</label>
+
+      <input type="radio" name="tab" id="tab2">
+      <label for="tab2">Skills</label>
+
+      <input type="radio" name="tab" id="tab3">
+      <label for="tab3">Projects</label>
+
+      <input type="radio" name="tab" id="tab4">
+      <label for="tab4">Contact</label>
+
+      <input type="radio" name="tab" id="tab5">
+      <label for="tab5">Certificates</label>
+
+      <!-- Tab Contents -->
+      <div class="tab-content" id="content1">
+        <section>
+          <h2>About Me</h2>
+          <img src="My_photo.jpg" width="200" height="200" alt="My Photo">
+          <p>Hello! I'm a developer passionate about crafting clean, creative, and user-friendly experiences.</p>
+        </section>
+      </div>
+
+      <div class="tab-content" id="content2">
+        <section>
+          <h2>Skills</h2>
+          <ul class="skills">
+            <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>React</li><li>Node.js</li><li>Python</li><li>Java</li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="tab-content" id="content3">
+        <section>
+          <h2>Projects</h2>
+          <div class="card">
+            <h3>Project A</h3>
+            <img src="porfolio.png" alt="Portfolio">
+            <p>A simple Portfolio website using only html.</p>
+          </div>
+          <div class="card">
+            <h3>Project B</h3>
+            <img src="To-do list.png" alt="To-Do List">
+            <p>An interactive To-Do list web site using HTML, CSS, and JavaScript.</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="tab-content" id="content4">
+        <section>
+          <h2>Contact</h2>
+          <p>Email: ishwarinetha93@gmail.com</p>
+          <a href="Resume.pdf" class="btn" download>Download Resume</a>
+        </section>
+      </div>
+
+      <div class="tab-content" id="content5">
+        <section>
+          <h2>Certificates</h2>
+          <div class="certificates">
+            <div class="card">
+              <h3>Python Basics</h3>
+              <img src="certificate1.png" alt="Python Certificate">
+              <p>Issued by Cognitive class, 2025</p>
+            </div>
+            <div class="card">
+              <h3>SQL and Relational Databases</h3>
+              <img src="certificate2.png" alt="SQL and Relational Databases Certificate">
+              <p>Issued by IBM, 2025</p>
+            </div>
+            
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Adepu Bhuvana</p>
+    </footer>
+  </div>
+</body>
+</html>
